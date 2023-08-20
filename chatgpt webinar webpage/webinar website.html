@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title></title>
+<meta charset="utf-8"/>
+<meta content="width=device-width" name="viewport"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css"/>
+<style>
+		.bee-row,
+		.bee-row-content {
+			position: relative
+		}
+
+		.bee-form .bee-form-row .bee-field button {
+			font-size: inherit;
+			font-family: inherit
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-5 .bee-button-container {
+			text-align: center
+		}
+
+		body {
+			background-color: #fbfbfb;
+			color: #000;
+			font-family: Cabin, Arial, Helvetica Neue, Helvetica, sans-serif
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-2 li a,
+		a {
+			color: #175df1
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		body,
+		p {
+			margin: 0
+		}
+
+		.bee-menu .bee-hamburger-trigger {
+			display: none
+		}
+
+		.bee-row-content {
+			max-width: 1035px;
+			margin: 0 auto;
+			display: flex
+		}
+
+		.bee-row-content .bee-col-w4 {
+			flex-basis: 33%
+		}
+
+		.bee-row-content .bee-col-w6 {
+			flex-basis: 50%
+		}
+
+		.bee-row-content .bee-col-w8 {
+			flex-basis: 67%
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-5 div.label:not(.inline),
+		.bee-row-3 .bee-col-1 .bee-block-5 label:not(.inline),
+		.bee-row-content .bee-col-w12 {
+			flex-basis: 100%
+		}
+
+		.bee-icon .bee-icon-label-right a,
+		.bee-menu ul li a {
+			text-decoration: none
+		}
+
+		.bee-divider,
+		.bee-image {
+			overflow: auto
+		}
+
+		.bee-divider .center,
+		.bee-image .bee-center {
+			margin: 0 auto
+		}
+
+		.bee-row-12 .bee-col-1 .bee-block-4,
+		.bee-row-12 .bee-col-2 .bee-block-4,
+		.bee-row-12 .bee-col-3 .bee-block-4,
+		.bee-row-2 .bee-col-2 .bee-block-2,
+		.bee-row-3 .bee-col-1 .bee-block-5 .bee-form-row:not(.bee-sidelabel) input:not([type=checkbox]):not([type=radio]) {
+			width: 100%
+		}
+
+		.bee-form .bee-form-row .bee-field {
+			padding: 3px;
+			display: flex;
+			flex: 1;
+			flex-wrap: wrap;
+			align-items: center
+		}
+
+		.bee-form .bee-form-row .bee-field input:not([type=checkbox]):not([type=radio]) {
+			flex-grow: 1;
+			font-family: inherit;
+			font-size: inherit
+		}
+
+		.bee-form .bee-form-row .bee-field input[type=checkbox]:not(:first-of-type) {
+			margin-left: 15px
+		}
+
+		.bee-form .bee-form-row .bee-field .bee-button-container {
+			flex-grow: 1
+		}
+
+		.bee-form input[type=color] {
+			border: none;
+			height: 38px
+		}
+
+		.bee-form input[type=color]::-webkit-color-swatch-wrapper {
+			margin: 0;
+			padding: 2px
+		}
+
+		.bee-menu ul {
+			margin: 0;
+			padding: 0
+		}
+
+		.bee-form input[type=color]::-webkit-color-swatch {
+			margin: 0;
+			padding: 0
+		}
+
+		.bee-icon {
+			display: inline-block;
+			vertical-align: middle
+		}
+
+		.bee-icon .bee-content {
+			display: flex;
+			align-items: center
+		}
+
+		.bee-image img {
+			display: block;
+			width: 100%
+		}
+
+		.bee-menu .bee-hamburger-controls {
+			cursor: pointer;
+			display: inline-block;
+			position: relative
+		}
+
+		.bee-menu .bee-hamburger-controls span {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			transition: .12s ease-in-out
+		}
+
+		.bee-menu ul {
+			list-style-type: none
+		}
+
+		.bee-menu ul.bee-horizontal li {
+			display: inline-block
+		}
+
+		.bee-social .icon img {
+			max-height: 32px
+		}
+
+		.bee-text {
+			overflow-wrap: anywhere
+		}
+
+		.bee-row-1,
+		.bee-row-10,
+		.bee-row-11,
+		.bee-row-12,
+		.bee-row-14,
+		.bee-row-15,
+		.bee-row-5,
+		.bee-row-6,
+		.bee-row-9 {
+			background-repeat: no-repeat
+		}
+
+		.bee-row-1 .bee-row-content,
+		.bee-row-10 .bee-row-content,
+		.bee-row-11 .bee-row-content,
+		.bee-row-12 .bee-row-content,
+		.bee-row-14 .bee-row-content,
+		.bee-row-15 .bee-row-content,
+		.bee-row-2 .bee-row-content,
+		.bee-row-3 .bee-row-content,
+		.bee-row-4 .bee-row-content,
+		.bee-row-5 .bee-row-content,
+		.bee-row-6 .bee-row-content,
+		.bee-row-7 .bee-row-content,
+		.bee-row-8 .bee-row-content,
+		.bee-row-9 .bee-row-content {
+			background-repeat: no-repeat;
+			color: #000
+		}
+
+		.bee-row-1 .bee-col-1,
+		.bee-row-1 .bee-col-2,
+		.bee-row-14 .bee-col-1,
+		.bee-row-15 .bee-col-1,
+		.bee-row-5 .bee-col-1,
+		.bee-row-6 .bee-col-1,
+		.bee-row-6 .bee-col-2,
+		.bee-row-6 .bee-col-3,
+		.bee-row-7 .bee-col-1,
+		.bee-row-8 .bee-col-1,
+		.bee-row-8 .bee-col-2,
+		.bee-row-9 .bee-col-1 {
+			padding-bottom: 5px;
+			padding-top: 5px
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-1 {
+			padding-bottom: 25px;
+			padding-left: 10px;
+			padding-top: 20px;
+			width: 100%
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-2 {
+			color: #000;
+			font-family: inherit;
+			font-size: 13px;
+			text-align: center
+		}
+
+		.bee-row-13,
+		.bee-row-2,
+		.bee-row-3,
+		.bee-row-4 {
+			background-color: #175df1;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-1,
+		.bee-row-3 .bee-col-1 .bee-block-1,
+		.bee-row-3 .bee-col-2 .bee-block-1 {
+			padding: 10px 10px 20px
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-2 {
+			padding-left: 20px
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-3,
+		.bee-row-3 .bee-col-2 .bee-block-3 {
+			padding: 15px 20px 10px
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-4 {
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 5px
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-5,
+		.bee-row-3 .bee-col-2 .bee-block-4 {
+			padding: 20px 20px 10px
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-6 {
+			color: #fff;
+			font-family: inherit;
+			font-size: 21px;
+			text-align: left
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-2,
+		.bee-row-14 .bee-col-1 .bee-block-1,
+		.bee-row-2 .bee-col-2 .bee-block-1,
+		.bee-row-6 .bee-col-1 .bee-block-2,
+		.bee-row-6 .bee-col-2 .bee-block-2,
+		.bee-row-6 .bee-col-3 .bee-block-2,
+		.bee-row-7 .bee-col-1 .bee-block-1 {
+			padding: 10px
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-2 {
+			padding-left: 10px
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-3 {
+			padding-left: 20px;
+			padding-top: 35px
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-5 {
+			font-family: inherit;
+			font-size: 14px;
+			padding-bottom: 15px;
+			padding-left: 10px;
+			padding-right: 10px;
+			text-align: center
+		}
+
+		.bee-row-3 .bee-col-2 .bee-block-2 {
+			padding-left: 20px;
+			padding-right: 20px
+		}
+
+		.bee-row-5 .bee-col-1 .bee-block-1 {
+			padding: 40px 10px 15px
+		}
+
+		.bee-row-12 .bee-col-1 .bee-block-3,
+		.bee-row-12 .bee-col-2 .bee-block-3,
+		.bee-row-12 .bee-col-3 .bee-block-3,
+		.bee-row-5 .bee-col-1 .bee-block-2,
+		.bee-row-5 .bee-col-1 .bee-block-3,
+		.bee-row-5 .bee-col-1 .bee-block-4,
+		.bee-row-6 .bee-col-1 .bee-block-3,
+		.bee-row-6 .bee-col-2 .bee-block-3,
+		.bee-row-6 .bee-col-3 .bee-block-3,
+		.bee-row-9 .bee-col-1 .bee-block-2 {
+			padding-bottom: 10px;
+			padding-left: 10px;
+			padding-right: 10px
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-1,
+		.bee-row-10 .bee-col-2 .bee-block-1,
+		.bee-row-10 .bee-col-3 .bee-block-1,
+		.bee-row-11 .bee-col-1 .bee-block-1,
+		.bee-row-11 .bee-col-3 .bee-block-1,
+		.bee-row-6 .bee-col-1 .bee-block-1,
+		.bee-row-6 .bee-col-2 .bee-block-1,
+		.bee-row-6 .bee-col-3 .bee-block-1 {
+			padding: 10px;
+			width: 100%
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-1,
+		.bee-row-6 .bee-col-1 .bee-block-4,
+		.bee-row-6 .bee-col-2 .bee-block-4 {
+			padding: 10px;
+			text-align: center
+		}
+
+		.bee-row-6 .bee-col-3 .bee-block-4 {
+			padding: 10px 10px 30px;
+			text-align: center
+		}
+
+		.bee-row-7,
+		.bee-row-8 {
+			background-color: #f9c253;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-8 .bee-col-1 .bee-block-1 {
+			padding-left: 20px;
+			padding-right: 10px
+		}
+
+		.bee-row-8 .bee-col-1 .bee-block-2 {
+			padding: 15px 10px 25px 20px
+		}
+
+		.bee-row-8 .bee-col-2 .bee-block-1 {
+			padding-bottom: 20px;
+			padding-left: 20px;
+			padding-right: 10px
+		}
+
+		.bee-row-9 .bee-col-1 .bee-block-1 {
+			padding: 20px 10px 15px
+		}
+
+		.bee-row-9 .bee-col-1 .bee-block-3 {
+			padding-bottom: 20px;
+			padding-left: 10px;
+			padding-right: 10px
+		}
+
+		.bee-row-10 .bee-col-1,
+		.bee-row-10 .bee-col-3,
+		.bee-row-11 .bee-col-2 {
+			background-color: #f0f8ff;
+			padding-bottom: 5px;
+			padding-top: 20px
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-2,
+		.bee-row-10 .bee-col-2 .bee-block-2,
+		.bee-row-10 .bee-col-3 .bee-block-2,
+		.bee-row-11 .bee-col-1 .bee-block-2,
+		.bee-row-11 .bee-col-2 .bee-block-2,
+		.bee-row-11 .bee-col-3 .bee-block-2 {
+			padding: 5px 10px 10px
+		}
+
+		.bee-row-10 .bee-col-1 .bee-block-3,
+		.bee-row-10 .bee-col-2 .bee-block-3,
+		.bee-row-10 .bee-col-3 .bee-block-3,
+		.bee-row-11 .bee-col-1 .bee-block-3,
+		.bee-row-11 .bee-col-2 .bee-block-3,
+		.bee-row-11 .bee-col-3 .bee-block-3 {
+			padding-bottom: 20px;
+			padding-left: 25px;
+			padding-right: 25px
+		}
+
+		.bee-row-10 .bee-col-2,
+		.bee-row-11 .bee-col-1,
+		.bee-row-11 .bee-col-3 {
+			background-color: #e8f1f9;
+			padding-bottom: 5px;
+			padding-top: 20px
+		}
+
+		.bee-row-11 .bee-col-2 .bee-block-1 {
+			padding: 10px 10px 10px 25px;
+			width: 100%
+		}
+
+		.bee-row-12 .bee-col-1 {
+			background-color: #fbfbfb;
+			padding-bottom: 5px
+		}
+
+		.bee-row-12 .bee-col-1 .bee-block-1,
+		.bee-row-12 .bee-col-2 .bee-block-1,
+		.bee-row-12 .bee-col-3 .bee-block-1 {
+			padding-top: 40px;
+			width: 100%
+		}
+
+		.bee-row-12 .bee-col-1 .bee-block-2,
+		.bee-row-12 .bee-col-2 .bee-block-2,
+		.bee-row-12 .bee-col-3 .bee-block-2 {
+			padding: 20px 10px 10px
+		}
+
+		.bee-row-12 .bee-col-2,
+		.bee-row-12 .bee-col-3 {
+			padding-bottom: 5px
+		}
+
+		.bee-row-13 .bee-row-content {
+			background-color: #175df1;
+			background-repeat: no-repeat;
+			color: #000
+		}
+
+		.bee-row-13 .bee-col-1 {
+			padding-bottom: 20px;
+			padding-top: 15px
+		}
+
+		.bee-row-15 .bee-col-1 .bee-block-1 {
+			color: #9d9d9d;
+			font-family: inherit;
+			font-size: 15px;
+			padding-bottom: 5px;
+			padding-top: 5px;
+			text-align: center
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-2 li {
+			padding: 30px 5px 5px
+		}
+
+		@media (max-width:768px) {
+			.bee-form form {
+				width: 100% !important
+			}
+
+			.bee-menu ul.with-bee-hamburger {
+				display: none;
+				padding: 5px 0;
+				position: relative;
+				top: -4px
+			}
+
+			.bee-menu ul.with-bee-hamburger li {
+				display: block;
+				text-align: center
+			}
+
+			.bee-menu ul.with-bee-hamburger li a {
+				text-decoration: none
+			}
+
+			.bee-menu ul.with-bee-hamburger span {
+				display: none
+			}
+
+			#bee-hamburger-memu-r0c1m1:checked~ul,
+			.bee-row-content:not(.no_stack) {
+				display: block
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-2 .bee-hamburger-controls {
+				width: 48px;
+				height: 48px;
+				background-color: #175df1;
+				border-radius: 0
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-2 .bee-hamburger-controls span {
+				width: 24px;
+				height: 24px
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-2 .bee-hamburger-controls span.bee-hamburger-open {
+				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgd2lkdGg9IjY0IiB5PSI1MiIvPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiIHk9IjI2Ii8+PC9nPjwvc3ZnPg==");
+				transform: translate(-50%, -50%) scaleY(1)
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-2 .bee-hamburger-controls span.bee-hamburger-close {
+				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09Im1hdHJpeCgtLjcwNzEwNjc4IC0uNzA3MTA2NzggLjcwNzEwNjc4IC0uNzA3MTA2NzggMzEuOTkxMzc4IDc3LjIzNDAxOSkiIHdpZHRoPSI4MiIgeD0iLTkuMDA4NjIyIiB5PSIyNS45OTEzNzgiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgdHJhbnNmb3JtPSJtYXRyaXgoLS43MDcxMDY3OCAuNzA3MTA2NzggLS43MDcxMDY3OCAtLjcwNzEwNjc4IDc3LjgxOTgwNiAzMi4yMzQwMTkpIiB3aWR0aD0iODIiIHg9Ii04Ljc2NTk4MSIgeT0iMjYuMjM0MDE5Ii8+PC9nPjwvc3ZnPg==");
+				transform: translate(-50%, -50%) scaleY(0)
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-2 ul.with-bee-hamburger {
+				background-color: #175df1
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-2 ul.with-bee-hamburger li,
+			.bee-row-1 .bee-col-2 .bee-block-2 ul.with-bee-hamburger li a {
+				color: #fff
+			}
+
+			#bee-hamburger-memu-r0c1m1:checked~.bee-hamburger-controls .bee-hamburger-open {
+				transform: translate(-50%, -50%) scaleY(0)
+			}
+
+			#bee-hamburger-memu-r0c1m1:checked~.bee-hamburger-controls .bee-hamburger-close {
+				transform: translate(-50%, -50%) scaleY(1)
+			}
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-6 .bee-icon-image {
+			padding: 5px 15px 5px 20px
+		}
+
+		.bee-row-15 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-2 .bee-col-1 .bee-block-6 .bee-icon:not(.bee-icon-first) .bee-content {
+			margin-left: 0
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-6 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-15 .bee-col-1 .bee-block-1 .bee-icon-image {
+			padding: 5px 6px 5px 5px
+		}
+
+		.bee-row-15 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-5 form {
+			display: inline-block;
+			width: 100%
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-5 div.label,
+		.bee-row-3 .bee-col-1 .bee-block-5 label {
+			color: #fbfbfb;
+			line-height: 200%;
+			text-align: left;
+			display: block
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-5 ::-webkit-input-placeholder {
+			color: #000
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-5 :-moz-placeholder {
+			color: #000
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-5 ::-moz-placeholder {
+			color: #000
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-5 :-ms-input-placeholder {
+			color: #000
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-5 .bee-field>label:first-child,
+		.bee-row-3 .bee-col-1 .bee-block-5 div.label {
+			padding: 3px
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-5 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
+			background-color: #fff;
+			border-bottom: 1px solid transparent;
+			border-left: 1px solid transparent;
+			border-radius: 4px;
+			border-right: 1px solid transparent;
+			border-top: 1px solid transparent;
+			color: #000;
+			padding: 5px;
+			min-height: 38px
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-5 input:not([type=checkbox]):not([type=radio]):focus {
+			outline-color: #3aaee0
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-5 button {
+			background-color: #f9c253;
+			border-bottom: 0 solid transparent;
+			border-left: 0 solid transparent;
+			border-radius: 4px;
+			border-right: 0px solid transparent;
+			border-top: 0 solid transparent;
+			color: #fff;
+			line-height: 200%;
+			padding: 5px 20px;
+			width: 100%
+		}
+	</style>
+</head>
+<body>
+<div class="bee-page-container">
+<div class="bee-row bee-row-1">
+<div class="bee-row-content no_stack">
+<div class="bee-col bee-col-1 bee-col-w6">
+<div class="bee-block bee-block-1 bee-image"><img alt="Logo" class="bee-center bee-fixedwidth" src="https://chatgptaihub.com/wp-content/uploads/2023/06/ChatGPT-Logo-Without-Background-Features-ChatGPT.png" style="max-width:129px;"/></div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w6">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:10px;"></div>
+</div>
+<div class="bee-block bee-block-2 bee-menu">
+<nav class="bee-menu"><input class="bee-hamburger-trigger" id="bee-hamburger-memu-r0c1m1" type="checkbox"/><label class="bee-hamburger-controls" for="bee-hamburger-memu-r0c1m1"><span class="bee-hamburger-open"></span><span class="bee-hamburger-close"></span></label>
+<ul class="bee-horizontal with-bee-hamburger">
+<li><a href="www.example.com" target="_blank" title="">WEBSITE </a></li><span> | </span>
+<li><a href="www.example.com" target="_self" title="">WEBINARS</a></li><span> | </span>
+<li><a href="www.example.com" target="_self" title="">CALENDAR</a></li><span> | </span>
+<li><a href="www.example.com" target="_self" title="">GET IN TOUCH</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-2">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w6">
+<div class="bee-block bee-block-1 bee-divider">
+<div class="spacer" style="height:10px;"></div>
+</div>
+<div class="bee-block bee-block-2 bee-divider">
+<div class="left bee-separator" style="border-top:6px solid #FFFFFF;width:80%;"></div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: 'Cabin', Arial, 'Helvetica Neue', Helvetica, sans-serif; color: #ffffff;">
+<p style="font-size: 14px; line-height: 16px;"><span style="font-size: 24px; line-height: 28px; color: #ffffff; background-color: #f9c253;"> <span style="line-height: 14px; background-color: #f9c253;">WEBINAR:ChatGPT</span> </span></p>
+</div>
+</div>
+<div class="bee-block bee-block-4 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: 'Cabin', Arial, 'Helvetica Neue', Helvetica, sans-serif; color: #ffffff;">
+<p style="font-size: 30px; line-height: 36px;"><strong style="">Unleashing Engineers’ Career Growth Associated with ALIOZE</strong></p>
+</div>
+</div>
+<div class="bee-block bee-block-5 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 150%; font-family: inherit; color: #ffffff;">
+<p style="font-size: 14px; line-height: 21px;"><span style="font-size: 16px; line-height: 24px;">Platform Engineering is the discipline of designing, building, and managing the infrastructure and services (the “platform”) upon which software developers build applications. This platform often includes hardware, operating systems, networks, databases, servers, and other software and hardware that support application development and execution.</span></p>
+</div>
+</div>
+<div class="bee-block bee-block-6 bee-icons">
+<div class="bee-icon bee-icon-first">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="Calendar icon" height="32px" src="images/calendar__1_.png" width="auto"/></div>
+<div class="bee-icon-label bee-icon-label-right">31st August,2023 </div>
+</div>
+</div>
+<div class="bee-icon bee-icon-last">
+<div class="bee-content">
+<div class="bee-icon-image"><img height="32px" src="images/midnight.png" width="auto"/></div>
+<div class="bee-icon-label bee-icon-label-right">11 AM (IST)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w6">
+<div class="bee-block bee-block-1 bee-divider">
+<div class="spacer" style="height:0px;"></div>
+</div>
+<div class="bee-block bee-block-2 bee-image"><img alt="" class="bee-center bee-autowidth" src="images/FACES.gif" style="max-width:367px;"/></div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-3">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w6">
+<div class="bee-block bee-block-1 bee-divider">
+<div class="spacer" style="height:10px;"></div>
+</div>
+<div class="bee-block bee-block-2 bee-divider">
+<div class="left bee-separator" style="border-top:6px solid #FFFFFF;width:80%;"></div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: 'Oswald', Arial, 'Helvetica Neue', Helvetica, sans-serif; color: #f9c253;">
+<p style="line-height: 14px;"><span style="font-size: 20px; line-height: 24px;"><strong style="">Fill out this form and save your seat</strong></span></p>
+</div>
+</div>
+<div class="bee-block bee-block-4 bee-spacer">
+<div class="spacer" style="height:25px;"></div>
+</div>
+<div class="bee-block bee-block-5 bee-form">
+<form accept-charset="UTF-8" action="ACTION_PLACEHOLDER" autocomplete="on" enctype="multipart/form-data" method="post" target="_self">
+<div class="bee-form-row">
+<div class="bee-field bee-field-r2c0m4i1"><input id="r2c0m4i1" name="firstname" placeholder="Full Name" required="" type="text"/></div>
+</div>
+<div class="bee-form-row">
+<div class="bee-field bee-field-r2c0m4i3"><input id="r2c0m4i3" name="email" placeholder="Email" required="" type="email"/></div>
+</div>
+<div class="bee-form-row">
+<div class="bee-field bee-field-r2c0m4i11">
+<div class="bee-button-container"><button id="r2c0m4i11" name="submit" type="submit" value="REGISTER" onclick="location.href='https://www.alioze.com/en/successfully-registered'">REGISTER</button></div>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w6">
+<div class="bee-block bee-block-1 bee-divider">
+<div class="spacer" style="height:10px;"></div>
+</div>
+<div class="bee-block bee-block-2 bee-divider">
+<div class="left bee-separator" style="border-top:6px solid #FFFFFF;width:80%;"></div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: 'Cabin', Arial, 'Helvetica Neue', Helvetica, sans-serif; color: #ffffff;">
+<p style="font-size: 14px; line-height: 16px;"><span style="font-size: 24px; line-height: 28px; color: #ffffff; background-color: #f9c253;"> AGENDA </span></p>
+</div>
+</div>
+<div class="bee-block bee-block-4 bee-text">
+<div class="bee-text-content" style="font-size: 12px; line-height: 150%; font-family: inherit; color: #ffffff;">
+<p style="font-size: 15px; line-height: 22px;"><span style="font-size: 15px; line-height: 22px;">ChatGPT is <strong style="">an AI chatbot that uses natural language processing to create humanlike conversational dialogue</strong>. The language model can respond to questions and compose various written content, including articles, social media posts, essays, code and emails.</span></p>
+<p style="font-size: 15px; line-height: 22px;"><span style="font-size: 15px; line-height: 22px;">Accelerate your career with this comprehensive AI and ML course that delivers a high-engagement learning experience</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-4">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:60px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-5">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #393d47;">
+<p style="font-size: 14px; line-height: 16px; text-align: center;"><span style="font-size: 18px; line-height: 21px;"><strong style="">Meet Our</strong></span></p>
+</div>
+</div>
+<div class="bee-block bee-block-2 bee-divider">
+<div class="center bee-separator" style="border-top:3px solid #F9C253;width:10%;"></div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: 'Cabin', Arial, 'Helvetica Neue', Helvetica, sans-serif; color: #175df1;">
+<p style="font-size: 14px; line-height: 16px; text-align: center;"><span style="font-size: 38px; line-height: 45px;"><strong style="">SPEAKERS</strong></span></p>
+</div>
+</div>
+<div class="bee-block bee-block-4 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 150%; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #393d47;">
+<p style="font-size: 14px; line-height: 21px; text-align: center;">Public speaking is an essential skill for many leaders and professionals. It’s a great way to share information, influence others, and make powerful statements </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-6">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="Speaker" class="bee-center bee-autowidth" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Sam_Altman_CropEdit_James_Tamim.jpg/1200px-Sam_Altman_CropEdit_James_Tamim.jpg" style="max-width:325px;"/></div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: 'Cabin', Arial, 'Helvetica Neue', Helvetica, sans-serif; color: #175df1;">
+<p style="font-size: 14px; line-height: 16px; text-align: center;"><span style="font-size: 15px; line-height: 18px;"><strong style="">SAM ALTMAN</strong></span></p>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 150%; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #393d47;">
+<p style="font-size: 14px; line-height: 21px; text-align: center;"><em style=""><span style="font-size: 14px; line-height: 21px;"><strong style="">OPENAI - FOUNDER</strong></span></em></p>
+</div>
+</div>
+<div class="bee-block bee-block-4 bee-social">
+<div class="content"><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.linkedin.com" target="_self"><img alt="Linkedin" src="images/linkedin2x-1.png" title="linkedin"/></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.instagram.com" target="_self"><img alt="Instagram" src="images/instagram2x-1.png" title="instagram"/></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.tiktok.com" target="_self"><img alt="TikTok" src="images/tiktok2x.png" title="TikTok"/></a></span></div>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="Speaker" class="bee-center bee-autowidth" src="https://ai.stanford.edu/wp-content/uploads/2018/05/Ft3ih2sN_400x400.jpg" style="max-width:325px;"/></div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 12px; line-height: 150%; font-family: 'Cabin', Arial, 'Helvetica Neue', Helvetica, sans-serif; color: #175df1;">
+<p style="font-size: 12px; text-align: center; line-height: 18px;"><strong style=""><span style="font-size: 14px; line-height: 21px;">LLYA SUTSKEVER</span></strong></p>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 150%; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #393d47;">
+<p style="font-size: 14px; line-height: 21px; text-align: center;"><span style="font-size: 14px; line-height: 21px;"><em style=""><span style="line-height: 18px;"><strong style="">DEVELOPER - COMPANY</strong></span></em></span></p>
+</div>
+</div>
+<div class="bee-block bee-block-4 bee-social">
+<div class="content"><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.linkedin.com" target="_self"><img alt="Linkedin" src="images/linkedin2x-1.png" title="linkedin"/></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.instagram.com" target="_self"><img alt="Instagram" src="images/instagram2x-1.png" title="instagram"/></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.tiktok.com" target="_self"><img alt="TikTok" src="images/tiktok2x.png" title="TikTok"/></a></span></div>
+</div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="Speaker" class="bee-center bee-fixedwidth" src="images/altra.png" style="max-width:293px;"/></div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: 'Cabin', Arial, 'Helvetica Neue', Helvetica, sans-serif; color: #175df1;">
+<p style="font-size: 14px; line-height: 16px; text-align: center;"><span style="font-size: 15px; line-height: 18px;"><strong style="">MEG DOROVA</strong></span></p>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 150%; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #393d47;">
+<p style="font-size: 14px; line-height: 21px; text-align: center;"><em style=""><span style="font-size: 14px; line-height: 21px;"><strong style="">MARKETER - COMPANY</strong></span></em></p>
+</div>
+</div>
+<div class="bee-block bee-block-4 bee-social">
+<div class="content"><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.linkedin.com" target="_self"><img alt="Linkedin" src="images/linkedin2x-1.png" title="linkedin"/></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.instagram.com" target="_self"><img alt="Instagram" src="images/instagram2x-1.png" title="instagram"/></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.tiktok.com" target="_self"><img alt="TikTok" src="images/tiktok2x.png" title="TikTok"/></a></span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-7">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-divider">
+<div class="spacer" style="height:0px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-8">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w4">
+<div class="bee-block bee-block-1 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 150%; font-family: inherit; color: #f7f8fb;">
+<p style="font-size: 14px; line-height: 21px;"><span style="color: #175df1; line-height: 30px; font-size: 20px;"><strong style=""><span style="line-height: 18px;">When</span></strong></span></p>
+<p style="font-size: 14px; line-height: 21px;">Aug 31, 2023  <em style="">4.p.m. </em></p>
+</div>
+</div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 150%; font-family: inherit; color: #f7f8fb;">
+<p style="font-size: 14px; line-height: 21px;"><span style="color: #175df1; line-height: 30px; font-size: 20px;"><strong style=""><span style="line-height: 18px;">Meeting number</span></strong></span></p>
+<p style="font-size: 14px; line-height: 21px;">2627-5823-7913</p>
+</div>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w8">
+<div class="bee-block bee-block-1 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 150%; font-family: inherit; color: #f7f8fb;">
+<p style="font-size: 14px; line-height: 21px;"><span style="color: #175df1; line-height: 30px; font-size: 20px;"><strong style=""><span style="line-height: 18px;">Duration</span></strong></span></p>
+<p style="font-size: 14px; line-height: 21px;"><span style="font-size: 14px; line-height: 21px;">Your lesson will last aproximately 1 hour and must be scheduled in advance</span></p>
+<p style="font-size: 14px; line-height: 21px;"> </p>
+<p style="line-height: 18px;"><span style="color: #175df1; line-height: 18px;"><strong style="">CONTACT EMAIL</strong></span></p>
+<p style="line-height: 18px;"><span style="color: #ffffff; line-height: 18px;">openai@gmail.com</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-9">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: inherit; color: #393d47;">
+<p style="font-size: 14px; line-height: 16px; text-align: center;"><span style="font-size: 15px; line-height: 18px;"><strong style="">WHAT WE'LL COVER</strong></span></p>
+</div>
+</div>
+<div class="bee-block bee-block-2 bee-divider">
+<div class="center bee-separator" style="border-top:3px solid #F9C253;width:10%;"></div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: 'Cabin', Arial, 'Helvetica Neue', Helvetica, sans-serif; color: #175df1;">
+<p style="font-size: 14px; line-height: 16px; text-align: center;"><span style="font-size: 38px; line-height: 45px;"><strong style="">MAIN LOREM</strong></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-10">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="Topic Icon" class="bee-center bee-autowidth" src="images/mobile-app__1_.png" style="max-width:64px;"/></div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: inherit; color: #175df1;">
+<p style="text-align: center; line-height: 14px;"><span style="font-size: 15px; line-height: 18px;"><strong style="">Natural Language Processing.</strong></span></p>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 12px; line-height: 150%; font-family: inherit; color: #393d47;">
+<p style="font-size: 12px; text-align: center; line-height: 18px;"> <strong style="">application of computational techniques to the analysis and synthesis of natural language and speech.</strong></p>
+</div>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="Topic Icon" class="bee-center bee-autowidth" src="images/add.png" style="max-width:64px;"/></div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: inherit; color: #175df1;">
+<p style="font-size: 14px; line-height: 16px; text-align: center;"><strong style=""><span style="font-size: 15px; line-height: 18px;">Prompt Engineering</span></strong></p>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 12px; line-height: 150%; font-family: inherit; color: #393d47;">
+<p style="font-size: 12px; text-align: center; line-height: 18px;"><strong style="">communication with a text-to-text model, is the process of structuring text that can be interpreted</strong></p>
+</div>
+</div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="Topic Icon" class="bee-center bee-autowidth" src="images/dating-app.png" style="max-width:64px;"/></div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: inherit; color: #175df1;">
+<p style="font-size: 14px; line-height: 16px; text-align: center;"><strong style=""><span style="font-size: 15px; line-height: 18px;">Fine-tuning pre-trained language models</span></strong></p>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 12px; line-height: 150%; font-family: inherit; color: #393d47;">
+<p style="font-size: 12px; text-align: center; line-height: 18px;"><strong style="">model is repurposed for a particular task by being shown illustrations of the correct behavior</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-11">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="Topic Icon" class="bee-center bee-autowidth" src="images/app-development.png" style="max-width:64px;"/></div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: inherit; color: #175df1;">
+<p style="font-size: 14px; line-height: 16px; text-align: center;"><strong style=""><span style="font-size: 15px; line-height: 18px;">Leveraging ChatGPT for Productivity</span></strong></p>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 12px; line-height: 150%; text-align: center; font-family: inherit; color: #393d47;">
+<p style=""><strong style="">ChatGPT can further aid data analysis by extracting relevant information from unstructured data sources</strong></p>
+<p style="font-size: 12px; line-height: 18px;"> </p>
+</div>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="Topic Icon" class="bee-center bee-autowidth" src="images/smartphone.png" style="max-width:64px;"/></div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 12px; line-height: 120%; font-family: inherit; color: #175df1;">
+<p style="font-size: 12px; text-align: center; line-height: 14px;"><strong style=""><span style="font-size: 15px; line-height: 18px;">Working with ChatGPT and OpenAI API</span></strong></p>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 12px; line-height: 150%; font-family: inherit; color: #393d47;">
+<p style="font-size: 12px; text-align: center; line-height: 18px;"><strong style=""> ChatGPT API is an interface provided by OpenAI that allows developers to integrate the ChatGPT model into their own applications, software, or platforms</strong></p>
+</div>
+</div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="Topic Icon" class="bee-center bee-autowidth" src="images/mobile-payment.png" style="max-width:64px;"/></div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 12px; line-height: 120%; font-family: inherit; color: #175df1;">
+<p style="font-size: 12px; text-align: center; line-height: 14px;"><strong style=""><span style="font-size: 15px; line-height: 18px;">Building ChatGPT powered applications</span></strong></p>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 12px; line-height: 150%; font-family: inherit; color: #393d47;">
+<p style="font-size: 12px; text-align: center; line-height: 18px;"><strong style="">ChatGPT for app development can greatly streamline the development process while enhancing the in-app user experienc</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-12">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="Ticket Icon" class="bee-center bee-autowidth" src="images/sun.png" style="max-width:64px;"/></div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: inherit; color: #175df1;">
+<p style="font-size: 14px; line-height: 16px; text-align: center;"><strong style=""><span style="font-size: 15px; line-height: 18px;">EARLY BIRD TICKET</span></strong></p>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 150%; font-family: inherit; color: #393d47;">
+<p style="font-size: 14px; line-height: 21px; text-align: center;">NORMAL BALCONY TICKET </p>
+<p style="font-size: 14px; line-height: 21px; text-align: center;"><span style="font-size: 22px; color: #f9c253; line-height: 33px;"><strong style="">₹300</strong></span></p>
+<p style="font-size: 14px; line-height: 21px; text-align: center;"> </p>
+</div>
+</div>
+<div class="bee-block bee-block-4 bee-image"><img alt="" class="bee-center bee-autowidth" src="images/shade.png" style="max-width:270px;"/></div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="Ticket Icon" class="bee-center bee-autowidth" src="images/plane-tickets.png" style="max-width:64px;"/></div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: inherit; color: #175df1;">
+<p style="font-size: 14px; line-height: 16px; text-align: center;"><strong style=""><span style="font-size: 15px; line-height: 18px;">STANDARD TICKET</span></strong></p>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 150%; font-family: inherit; color: #393d47;">
+<p style="font-size: 14px; line-height: 21px; text-align: center;"><span style="font-size: 16px; line-height: 24px;">BALCONY TICKET WITH ALL ALLIANCES</span></p>
+<p style="font-size: 14px; line-height: 21px; text-align: center;"><span style="font-size: 22px; background-color: #ffffff; color: #ffbe00; line-height: 33px;"><strong style="">₹500</strong></span></p>
+</div>
+</div>
+<div class="bee-block bee-block-4 bee-image"><img alt="" class="bee-center bee-autowidth" src="images/shade.png" style="max-width:270px;"/></div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="Ticket Icon" class="bee-center bee-autowidth" src="images/vip__1_.png" style="max-width:64px;"/></div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 120%; font-family: inherit; color: #175df1;">
+<p style="font-size: 14px; line-height: 16px; text-align: center;"><strong style=""><span style="font-size: 15px; line-height: 18px;">V.I.P. TICKET</span></strong></p>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 150%; font-family: inherit; color: #393d47;">
+<p style="font-size: 14px; line-height: 21px; text-align: center;"><span style="font-size: 16px; line-height: 24px;">SPECIAL BOX SUPPLIED WITH AC AND ALLIANCES</span></p>
+<p style="font-size: 14px; line-height: 21px; text-align: center;"><span style="font-size: 22px; color: #f9c253; line-height: 33px;"><strong style="">₹750</strong></span></p>
+<p style="font-size: 14px; line-height: 21px; text-align: center;"> </p>
+</div>
+</div>
+<div class="bee-block bee-block-4 bee-image"><img alt="" class="bee-center bee-autowidth" src="images/shade.png" style="max-width:270px;"/></div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-13">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-social">
+<div class="content"><span class="icon" style="padding:0 7.5px 0 7.5px;"><a href="https://www.facebook.com" target="_self"><img alt="Facebook" src="images/facebook2x.png" title="Facebook"/></a></span><span class="icon" style="padding:0 7.5px 0 7.5px;"><a href="https://www.twitter.com" target="_self"><img alt="Twitter" src="images/twitter2x.png" title="Twitter"/></a></span><span class="icon" style="padding:0 7.5px 0 7.5px;"><a href="https://www.instagram.com" target="_self"><img alt="Instagram" src="images/instagram2x.png" title="Instagram"/></a></span><span class="icon" style="padding:0 7.5px 0 7.5px;"><a href="https://www.linkedin.com" target="_self"><img alt="LinkedIn" src="images/linkedin2x.png" title="LinkedIn"/></a></span></div>
+</div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 14px; line-height: 180%; font-family: inherit; color: #ffffff;">
+<p style="font-size: 14px; line-height: 25px; text-align: center;"><strong style="">About us  |  Contact us  |  Privacy Policy  |  FAQ</strong></p>
+<p style="font-size: 14px; line-height: 25px; text-align: center;"><a href="http://www.example.com/" rel="noopener" style="text-decoration: none; color: #ffffff;" target="_blank">https://openai.com/blog/chatgpt</a></p>
+<p style="font-size: 14px; line-height: 25px; text-align: center;"><strong style="">OPENAI 298AD San Francisco </strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-14">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-divider">
+<div class="spacer" style="height:0px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-15">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-icons">
+<div class="bee-icon bee-icon-last">
+<div class="bee-content">
+<div class="bee-icon-image"><a href="https://www.designedwithbee.com/" target="_blank" title="Designed with BEE"><img alt="Designed with BEE" height="32px" src="images/bee.png" width="auto"/></a></div>
+<div class="bee-icon-label bee-icon-label-right"><a href="https://www.designedwithbee.com/" target="_blank" title="Designed with BEE">Designed with BEE</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
